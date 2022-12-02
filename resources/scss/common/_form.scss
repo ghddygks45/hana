@@ -1,0 +1,676 @@
+@use '../var'as*;
+
+.chk {
+	display: inline-block;
+	position: relative;
+
+	input[type=checkbox],
+	input[type=radio] {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		left: 0;
+		top: 0;
+		opacity: 0;
+
+		&:checked {
+			&+label {
+				font-weight: 500;
+				color: #000;
+			}
+		}
+	}
+
+	label {
+		display: inline-block;
+		padding-left: 30px;
+		min-height: 24px;
+
+		background-position: 0 1px;
+		background-repeat: no-repeat;
+		background-size: 22px 22px;
+
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 24px;
+
+		.ico_arr_right {
+			margin-left: 6px;
+		}
+	}
+
+	input[type=checkbox] {
+		&+label {
+			background-image: url(#{$img-path}/ico_checkbox_off.png);
+		}
+
+		&:checked {
+			&+label {
+				background-image: url(#{$img-path}/ico_checkbox_on.png);
+			}
+		}
+	}
+
+	input[type=radio] {
+		&+label {
+			background-image: url(#{$img-path}/ico_radio_off.png);
+		}
+
+		&:checked {
+			&+label {
+				background-image: url(#{$img-path}/ico_radio_on.png);
+			}
+		}
+	}
+
+	&.min {
+		label {
+			padding-left: 19px;
+
+			background-size: 11px 8px;
+			background-position: 0px 7px;
+
+			font-weight: 300;
+			color: #666;
+		}
+
+		input {
+			&:checked {
+				&+label {
+					font-weight: 400;
+					color: #333;
+				}
+			}
+		}
+
+		input[type=checkbox] {
+			&+label {
+				background-image: url(#{$img-path}/ico_checkbox_min_off.png);
+			}
+
+			&:checked {
+				&+label {
+					background-image: url(#{$img-path}/ico_checkbox_min_on.png);
+				}
+			}
+		}
+	}
+
+	&.chk_box {
+		width: 100%;
+
+		label {
+			width: 100%;
+			padding: 16px 42px;
+			border: 1px solid #dddee4;
+			border-radius: 5px;
+			background-position: 15px 16px;
+		}
+
+		input {
+			&:checked {
+				&+label {
+					border-color: #999;
+				}
+			}
+		}
+
+		&+.chk_box {
+			margin-top: 20px;
+		}
+	}
+
+	&.min.chk_box {
+		label {
+			padding: 10px 15px 10px 42px;
+			background-position: 20px 15px;
+			line-height: 1.2;
+			background-image: none !important;
+		}
+
+		input {
+			&:checked {
+				&+label {
+					font-weight: 500;
+					border-color: $bc-1;
+					background-image: url(#{$img-path}/ico_checkbox_min_on.png) !important;
+				}
+			}
+		}
+	}
+}
+
+.chk_wrap {
+	display: flex;
+	max-width: 100%;
+	flex-wrap: wrap;
+	margin: -4px;
+
+	.chk {
+		flex: 1 1 calc(50% - 10px);
+		margin: 4px !important;
+	}
+}
+
+.chk_btn {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+
+	input {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		left: 0;
+		top: 0;
+		opacity: 0;
+	}
+
+	label {
+		width: 100%;
+		height: 44px;
+		line-height: 44px;
+		font-size: 16px;
+		font-weight: 200;
+		background-color: #fff;
+
+		border-color: #dddee4;
+		border-width: 1px;
+		border-top-style: solid;
+		border-bottom-style: solid;
+
+		transition: all .3s ease;
+	}
+
+	input[type=radio] {
+		&:checked {
+			+label {
+				background-color: $bc-1;
+				border-color: $bc-1;
+				color: #fff;
+				font-weight: 500;
+			}
+		}
+	}
+
+	&:first-child {
+		label {
+			border-left-style: solid;
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+		}
+	}
+
+	&:last-child {
+		label {
+			border-right-style: solid;
+			border-right: 1px solid #dddee4;
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+		}
+	}
+
+	&:not(:last-child) {
+		label {
+			border-right-style: solid;
+		}
+	}
+}
+
+.chk_btn_wrap {
+	display: flex;
+	flex-wrap: wrap;
+
+	.chk_btn {
+		flex: 1 1 20%;
+	}
+
+	&.col2 {
+		.chk_btn {
+			flex: 1 1 45%;
+
+			&:nth-child(n+3):nth-last-child(n+3) {
+				label {
+					border-bottom-style: none;
+					border-radius: 0;
+				}
+			}
+
+			&:nth-child(odd) {
+				label {
+					border-left: 1px solid #dddee4;
+				}
+			}
+
+			&:first-child {
+				label {
+					border-bottom: none;
+					border-bottom-left-radius: 0;
+				}
+
+				&:nth-last-child(2) {
+					label {
+						border-bottom: 1px solid #dddee4;
+					}
+				}
+			}
+
+			&:nth-child(2) {
+				label {
+					border-bottom-style: none;
+					border-top-right-radius: 5px !important;
+					border-bottom-right-radius: 0;
+				}
+			}
+
+			&:nth-last-child(2):not(:nth-child(-n+2)) {
+				label {
+					border-bottom: 1px solid #dddee4;
+					border-bottom-left-radius: 5px;
+				}
+
+				&:nth-child(even) {
+					label {
+						border-bottom-left-radius: 0;
+						border-bottom: none;
+					}
+				}
+			}
+
+			&:last-child {
+				label {
+					border-bottom-right-radius: 5px;
+					border-bottom: 1px solid #dddee4;
+				}
+
+				&:nth-child(odd) {
+					label {
+						border-bottom-left-radius: 5px;
+					}
+				}
+			}
+
+			&:last-child:not(:nth-child(2)) {
+				label {
+					border-top-right-radius: 0;
+				}
+			}
+		}
+	}
+}
+
+
+.field_wrap {
+	$filed-h: 60px;
+
+	display: block;
+	width: 100%;
+	height: $filed-h;
+	border: 1px solid #999;
+	border-radius: 5px;
+	background-color: #fff;
+
+	.field {
+		position: relative;
+		display: flex;
+		line-height: calc($filed-h - 2px);
+
+		font-size: 18px;
+		font-weight: 500;
+		color: #000;
+
+		.lab {
+			position: absolute;
+
+			max-width: calc(100% - 28px);
+			font-size: 15px;
+			font-weight: 400;
+			line-height: 1;
+			color: #666;
+
+			left: 14px;
+			top: 50%;
+			transform: translateY(-50%);
+
+			transition: all .3s ease;
+
+			&::before {
+				content: "";
+				position: absolute;
+				width: calc(100% + 10px);
+				height: 3px;
+				background-color: #fff;
+				left: 50%;
+				top: 7px;
+				z-index: -1;
+
+				transform: translate(-50%, -2px) scaleX(0.5);
+				transition: all .3s ease;
+				transition-delay: .1s;
+			}
+		}
+
+		.val {
+			width: 100%;
+			height: calc($filed-h - 2px);
+			padding: 0 14px;
+			border: 0;
+			background-color: transparent;
+
+			&:focus {
+				//outline: 0;
+			}
+
+			&.datepicker {
+				padding-right: 0;
+			}
+		}
+
+		.date {
+			display: flex;
+			width: 100%;
+
+			.datepicker {
+				align-self: center;
+				flex: 0 0 auto;
+				@include ir;
+				width: 44px;
+				height: 44px;
+				background-image: url(#{$img-path}/ico_datepicker.png);
+				background-size: 16px 16px;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+		}
+
+		.dash {
+			opacity: 0;
+			visibility: hidden;
+
+			transition: all .3s ease;
+		}
+
+		.ui-datepicker-trigger {
+			align-self: center;
+			flex: 0 0 auto;
+			@include ir;
+			width: 44px;
+			height: 44px;
+			background-image: url(#{$img-path}/ico_datepicker.png);
+			background-size: 16px 16px;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+
+	&.type_select {
+		.field {
+			padding-left: 14px;
+			padding-right: 42px;
+			background-repeat: no-repeat;
+			background-size: 11px 6px;
+			background-image: url(#{$img-path}/btn_toggle.png);
+			background-position: right 14px center;
+
+			.val {
+				overflow-x: auto;
+				overflow-y: hidden;
+				white-space: nowrap;
+				padding: 0;
+			}
+		}
+
+		&.sm {
+			height: 48px;
+			border-color: #dddee4;
+
+			.field {
+				line-height: 46px;
+
+				.val {
+					height: 46px;
+					font-size: 16px;
+				}
+			}
+		}
+	}
+
+	&.type_srh {
+		.field {
+			padding-left: 14px;
+			padding-right: 42px;
+			background-repeat: no-repeat;
+			background-size: 15px 15px;
+			background-image: url(#{$img-path}/ico_search.png);
+			background-position: right 14px center;
+
+			.val {
+				overflow-x: auto;
+				overflow-y: hidden;
+				white-space: nowrap;
+				padding: 0;
+			}
+		}
+	}
+
+	&.type_acc {
+		$filed-h: 74px;
+		height: $filed-h;
+
+		.field {
+			height: calc($filed-h - 2px);
+			padding-left: 14px;
+			padding-right: 42px;
+			background-repeat: no-repeat;
+			background-size: 11px 6px;
+			background-image: url(#{$img-path}/btn_toggle.png);
+			background-position: right 14px center;
+
+			.logo {
+				display: inline-block;
+				flex: 0 0 auto;
+				width: 20px;
+				height: 20px;
+				margin-right: 10px;
+				margin-top: 18px;
+
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+
+			.val {
+				height: calc($filed-h - 2px);
+				padding: 15px 0;
+				line-height: 1.4;
+				@include ellipsis();
+
+				.acc_num {
+					display: block;
+					font-weight: 300;
+					font-size: 14px;
+					color: #666;
+				}
+			}
+		}
+	}
+
+	&.type_pwd {
+		.field {
+			.val {
+				font-family: 'password';
+				font-weight: 500;
+				font-size: 40px;
+			}
+		}
+	}
+
+	&.focus,
+	&.active,
+	&[data-wa-btn] {
+		.field {
+			.lab {
+				font-size: 13px;
+				transform: translateY(-36px);
+
+				&::before {
+					content: "";
+					transform: translate(-50%, -2px) scaleX(1);
+				}
+
+				//background-image: linear-gradient(to top, #fff 50%, #888 100%);
+			}
+
+			.dash {
+				opacity: 1;
+				visibility: visible;
+
+				transition: all .3s ease;
+			}
+		}
+
+		&.type_acc {
+			.field {
+				.lab {
+					transform: translateY(-43px);
+				}
+			}
+		}
+	}
+
+	&+.field_guide {
+		margin-top: 9px;
+	}
+}
+
+.field_guide {
+	text-align: right;
+	font-size: 14px;
+	line-height: 20px;
+
+	em {
+		color: $bc-1;
+		font-weight: 400;
+	}
+
+	span {
+		font-weight: 400;
+	}
+}
+
+.btn {
+	width: auto;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	white-space: nowrap;
+	letter-spacing: -.5px;
+	padding: 0 10px;
+
+	border-width: 1px;
+	border-color: transparent;
+	border-style: solid;
+
+	color: #000;
+
+	&+.btn {
+		margin-left: 8px;
+	}
+
+	&_full {
+		width: 100%;
+	}
+
+	&_sm {
+		height: 36px;
+		line-height: 36px;
+		border-radius: 36px;
+
+		padding: 0 13px;
+		font-size: 14px;
+		font-weight: 400;
+	}
+
+	&_md {
+		height: 40px;
+		line-height: 40px;
+		border-radius: 5px;
+
+		padding: 0 14px;
+
+		font-size: 16px;
+		font-weight: 400;
+	}
+
+	&_mde {
+		height: 44px;
+		line-height: 44px;
+		font-size: 16px;
+		border-radius: 4px;
+
+		font-weight: 400;
+	}
+
+	&_lg {
+		height: 52px;
+		line-height: 52px;
+		border-radius: 100px;
+
+		padding: 0 24px;
+
+		font-size: 18px;
+		font-weight: 400;
+	}
+
+	&_default {
+		background-color: #8d9695;
+		color: #fff;
+	}
+
+	&_primary {
+		background-color: $bc-1;
+		color: #fff;
+	}
+
+	&_outline_white {
+		color: #fff;
+		border-color: currentColor;
+	}
+
+	&_outline_black {
+		color: #333;
+		border-color: currentColor;
+		background-color: #fff;
+	}
+
+	&_outline_primary {
+		color: $bc-1;
+		border-color: currentColor;
+		background-color: #fff;
+	}
+
+	@at-root .bottom_btn_area {
+		.btn {
+			width: 100%;
+
+			&_primary {
+				box-shadow: 0 7px 6px rgba(0, 149, 145, .25);
+			}
+		}
+	}
+}
+
+.btn_flex_wrap {
+	display: flex;
+	margin: -4px;
+	flex-wrap: wrap;
+
+	.btn {
+		flex: 1 1 auto;
+		margin: 4px;
+	}
+}

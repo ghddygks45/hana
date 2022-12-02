@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
+	<script src="../resources/js/jquery-3.5.1.min.js"></script>
+	<script src="../resources/js/jquery-ui.js"></script>
+	<script src="../resources/js/jquery.aniview.js"></script>
+	<script src="../resources/js/swiper-bundle.js"></script>
+
+	<link rel="stylesheet" href="../resources/css/animate.min.css">
+	<link rel="stylesheet" href="../resources/css/common.css">
+	<link rel="stylesheet" href="../resources/css/style.css">
+	<link rel="stylesheet" href="../resources/css/swiper.min.css">
+
+
+	<!-- 퍼블용 include -->
+	<script src="../resources/js/include.js"></script>
+	<!-- //퍼블용 include -->
+
+	<script src="../resources/js/ui.js"></script>
+
+	<title>1depth | 2depth ...</title>
+</head>
+
+<body>
+	<div id="wrap" class="wrap">
+
+		<header id="header" class="header">
+			<div class="header_cont">
+				<div class="inner">
+					<a href="#;" class="btn_undo" onclick="window.history.go(-1)">이전화면으로 돌아가기</a>
+					<h2 class="header_tit">보유상품 변경</h2>
+				</div>
+			</div>
+		</header>
+
+		<!-- contents -->
+		<div id="contents" class="contents">
+			<div class="inner">
+				<div class="cont_top">
+					<div class="ani-fadeinup" data-av-animation="animate__fadeInUp">
+						<div class="cont_step">
+							<span class="step" aria-hidden="true">
+								<em>5</em> / <span>6</span>
+							</span>
+						</div>
+						<h3 class="cont_tit">상품변경 내용 확인</h3>
+					</div>
+				</div>
+				<div class="section">
+					<div class="ani-fadeinup slow1" data-av-animation="animate__fadeInUp">
+						<h3 class="tit">보유상품 변경내용 총괄</h3>
+						<div class="pd_change">
+							<div class="pd_box before">
+								<strong class="pd_tit"><em>총 4건</em>매도</strong>
+								<div class="flex_lr">
+									<div class="l">예상금액</div>
+									<div class="r">25,727,000원</div>
+								</div>
+							</div>
+							<div class="pd_box after">
+								<strong class="pd_tit"><em>총 3건</em> 매수</strong>
+								<div class="flex_lr">
+									<div class="l">최종완료예정일</div>
+									<div class="r">2022년 10월 31일</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="ani-fadeinup slow2" data-av-animation="animate__fadeInUp">
+						<h3 class="tit">매도상품</h3>
+						<ul class="item_list type_lr narrow">
+							<li>
+								<strong class="item_tit">
+									글로벌주식솔루션증권자투자신탁<br>
+									(주식-재간접형)(UH)C퇴직E
+								</strong>
+								<div>
+									<div class="l">매도예상금액 좌수</div>
+									<div class="r"><em>5,000,000</em></div>
+								</div>
+								<div>
+									<div class="l">매도기준가 적용(예정)일</div>
+									<div class="r">2022년 10월 20일</div>
+								</div>
+								<div>
+									<div class="l">매도완료(예정)일</div>
+									<div class="r">2022년 10월 26일</div>
+								</div>
+							</li>
+							<li>
+								<strong class="item_tit">
+									모아저축은행 퇴직연금 정기예금<br>
+									(개인형IRP, 2년)
+								</strong>
+								<div>
+									<div class="l">매도예상금액 좌수</div>
+									<div class="r"><em>15,000,000</em></div>
+								</div>
+								<div>
+									<div class="l">매도기준가 적용(예정)일</div>
+									<div class="r">-</div>
+								</div>
+								<div>
+									<div class="l">매도완료(예정)일</div>
+									<div class="r">2022년 10월 26일</div>
+								</div>
+							</li>
+							<li>
+								<strong class="item_tit">
+									우리은행 퇴직연금정기예금<br>
+									(DC/IRP, 5년)
+								</strong>
+								<div>
+									<div class="l">매도예상금액 좌수</div>
+									<div class="r"><em>2,500,000</em></div>
+								</div>
+								<div>
+									<div class="l">매도기준가 적용(예정)일</div>
+									<div class="r">-</div>
+								</div>
+								<div>
+									<div class="l">매도완료(예정)일</div>
+									<div class="r">2022년 10월 26일</div>
+								</div>
+							</li>
+							<li>
+								<strong class="item_tit">
+									미운용 자산(현금성 자산)
+								</strong>
+								<div>
+									<div class="l">매도예상금액 좌수</div>
+									<div class="r"><em>5,000,000</em></div>
+								</div>
+								<div>
+									<div class="l">매도기준가 적용(예정)일</div>
+									<div class="r">-</div>
+								</div>
+								<div>
+									<div class="l">매도완료(예정)일</div>
+									<div class="r">2022년 10월 26일</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="section">
+					<div class="ani-fadeinup slow3" data-av-animation="animate__fadeInUp">
+						<h3 class="tit">매수상품</h3>
+						<ul class="item_list type_lr narrow">
+							<li>
+								<strong class="item_tit">
+									온국민TDF2055증권자투자신탁<br>
+									(주식혼합-재간접형)(UH)C-퇴직E
+								</strong>
+								<div>
+									<div class="l">운용비율</div>
+									<div class="r">30%</div>
+								</div>
+								<div>
+									<div class="l">매수기준가 적용(예정)일</div>
+									<div class="r">2022년 10월 20일</div>
+								</div>
+								<div>
+									<div class="l">매수완료(예정)일</div>
+									<div class="r"><em>2022년 10월 26일</em></div>
+								</div>
+							</li>
+							<li>
+								<strong class="item_tit">
+									한국투자TDF알아서2050증권<br>
+									투자신탁H(주식혼합-재간접형)(C-RE)
+								</strong>
+								<div>
+									<div class="l">운용비율</div>
+									<div class="r">40%</div>
+								</div>
+								<div>
+									<div class="l">매수기준가 적용(예정)일</div>
+									<div class="r">2022년 10월 20일</div>
+								</div>
+								<div>
+									<div class="l">매수완료(예정)일</div>
+									<div class="r"><em>2022년 10월 26일</em></div>
+								</div>
+							</li>
+							<li>
+								<strong class="item_tit">
+									신한은행 TOPS 퇴직플랜정기예금<br>
+									(DC/IRP, 3년)
+								</strong>
+								<div>
+									<div class="l">운용비율</div>
+									<div class="r">30%</div>
+								</div>
+								<div>
+									<div class="l">매수기준가 적용(예정)일</div>
+									<div class="r">-</div>
+								</div>
+								<div>
+									<div class="l">매수완료(예정)일</div>
+									<div class="r"><em>2022년 10월 26일</em></div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //contents -->
+
+		<div class="bottom_btn_area">
+			<a href="보유상품변경_상품변경완료.html" class="btn btn_lg btn_primary">다음</a>
+		</div>
+
+		<aside class="consulting">
+			<div class="consult_wrap">
+				<button type="button" class="btn_consult">
+					상담 진행하기
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</button>
+				<button type="button" class="btn_close">상담 버튼 닫기</button>
+			</div>
+		</aside>
+
+	</div>
+</body>
+
+</html>

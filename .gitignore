@@ -1,0 +1,6 @@
+# SCSS MAP #
+*.map
+
+# Directories #
+/.sass-cache
+.vscode

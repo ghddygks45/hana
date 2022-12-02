@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
+	<script src="../resources/js/jquery-3.5.1.min.js"></script>
+	<script src="../resources/js/jquery-ui.js"></script>
+	<script src="../resources/js/jquery.aniview.js"></script>
+	<script src="../resources/js/swiper-bundle.js"></script>
+	<script src="../resources/js/aos.js"></script>
+
+	<link rel="stylesheet" href="../resources/css/animate.min.css">
+	<link rel="stylesheet" href="../resources/css/swiper.min.css">
+
+	<link rel="stylesheet" href="../resources/css/common.css">
+	<link rel="stylesheet" href="../resources/css/style.css">
+
+	<link rel="stylesheet" href="../resources/css/aos.css">
+
+	<!-- 퍼블용 include -->
+	<script src="../resources/js/include.js"></script>
+	<!-- //퍼블용 include -->
+
+	<script src="../resources/js/ui.js"></script>
+
+	<title>1depth | 2depth ...</title>
+
+	<script>
+		$(function () {
+			AOS.init();
+
+			$('[data-aos]').each(function () {
+				$(this).attr('data-aos-once', 'true')
+			})
+
+			$('.irp_toggle_wrap .irp_toggle_tit').on('click', function () {
+				$(this).toggleClass('active').siblings().slideToggle(500);
+			})
+		})
+	</script>
+
+</head>
+
+<body style="background-color: #fff;">
+	<div id="wrap" class="wrap">
+
+		<!-- include header -->
+		<header id="header" class="header">
+			<div class="header_cont">
+				<div class="inner">
+					<a href="#;" class="btn_undo" onclick="window.history.go(-1)">이전화면으로 돌아가기</a>
+					<h2 class="header_tit">개인형 IRP 가입하기</h2>
+				</div>
+			</div>
+		</header>
+		<!-- //include header -->
+
+		<!-- contents -->
+		<div id="contents" class="contents">
+			<div class="irp_guide_wrap v2">
+				<div class="irp_section">
+					<div class="sec11">
+						<div class="bg01">
+							<span></span>
+						</div>
+						<span class="ico01" aria-hidden="true" data-aos="fade-left" data-aos-duration="1000"
+							data-aos-delay="1000"></span>
+						<div class="inner">
+							<h3 class="irp_tit" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="200">개인형 IRP 가입<br>금융 고수들은
+								벌써시작했어요</h3>
+							<p class="irp_sub_tit" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="600">연말정산 세액공제 + 은퇴준비
+							</p>
+							<p class="desc" data-aos="fade-up" data-aos-duration="1100" data-aos-delay="1400">소득이 있는 누구나<br>연
+								1,800만원까지<br>자유롭게 입금 할 수 있어요.</p>
+						</div>
+					</div>
+
+					<div class="sec12">
+						<div class="inner">
+							<h3 class="irp_tit underbar" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+								data-aos-delay="1700" data-aos-duration="1000">
+								개인형 IRP란?</h3>
+							<div class="txt_st">
+								<p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="2000"
+									data-aos-duration="1000">회사에서 납입해 주는 퇴직금으로 입금 할 수 있고,
+									직접 자유롭게 입금할 수도 있어요. </p>
+							</div>
+						</div>
+					</div>
+					<div class="sec13">
+						<div class="inner">
+							<h3 class="irp_tit underbar" data-aos="fade-up" data-aos-anchor-placement="top-center"
+								data-aos-delay="300" data-aos-duration="1000">
+								어떤 점이 좋나요?</h3>
+							<p class="txt_st txt_c" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-delay="300"
+								data-aos-duration="1000">첫째, 매년 연말정산에서는 700만원에 대한 세액공제 (최대 115만 5천원)를 받을 수 있어요. </p>
+							<div class="img_wrap01 mt_6" data-aos="fade-up" data-aos-anchor-placement="top-center"
+								data-aos-delay="300" data-aos-duration="1000">
+								<img src="../resources/images/img_irp_sec1301.png" alt="">
+								<img src="../resources/images/img_irp_sec1302.png" alt="" data-aos="zoom-in"
+									data-aos-anchor-placement="top-center" data-aos-delay="1000" data-aos-duration="600">
+							</div>
+							<div class="txt_r mt_2" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-delay="300"
+								data-aos-duration="1000">
+								<a href="#;" class="pop_link" onclick="fn_open_popup('popup1', this); return false;">계산해 보기 <i
+										class="ico_arr_right_sm"></i></a>
+							</div>
+							<div class="mt_16">
+								<p class="txt_st txt_c" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-delay="0"
+									data-aos-duration="800">둘째, 퇴직연금을 직접 운용하는 재미를 느낄 수 있어요.</p>
+								<div class="img_chg" data-scroll-item="true">
+									<div class="cont1">
+										<h4 class="irp_sub_tit mt_4 txt_c">모르면 추천을 받아보세요!</h4>
+										<div class="img_wrap02 mt_4">
+											<img src="../resources/images/img_irp_sec1303.png" alt="">
+										</div>
+									</div>
+									<div class="cont2">
+										<h4 class="irp_sub_tit mt_4 txt_c">따로따로</h4>
+										<div class="img_wrap02 mt_4">
+											<img src="../resources/images/img_irp_sec1303_1.png" alt="">
+										</div>
+									</div>
+									<div class="cont3">
+										<h4 class="irp_sub_tit mt_4 txt_c">또는같이</h4>
+										<div class="img_wrap02 mt_4">
+											<img src="../resources/images/img_irp_sec1303_2.png" alt="">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="mt_16">
+								<p class="txt_st txt_c" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-delay="300"
+									data-aos-duration="1000">셋째, 만 55세 이후 매달 또는 일시금으로 받을 수 있고,
+									받을 때 추가 세액공제 혜택도 있어요.</p>
+								<div class="img_wrap02 mt_6">
+									<img src="../resources/images/img_irp_sec1304.png" alt="" data-aos="fade-up"
+										data-aos-anchor-placement="top-center" data-aos-delay="300" data-aos-duration="1000">
+								</div>
+								<div class="txt_r mt_2" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-delay="300"
+									data-aos-duration="1000">
+									<a href="#;" class="pop_link" onclick="fn_open_popup('popup1', this); return false;">계산해 보기 <i class="
+										ico_arr_right_sm"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sec14">
+						<div class="inner">
+							<h3 class="irp_tit underbar" data-aos="fade-up" data-aos-anchor-placement="top-center"
+								data-aos-delay="300" data-aos-duration="1000">
+								하나은행 IRP는?</h3>
+							<div class="pop_bubble_wrap" data-scroll-item="true">
+								<div class="ico01 slow1"></div>
+								<div class="pop_bubble bubble01 slow2">
+									<span>안전해요</span>
+								</div>
+								<div class="pop_bubble bubble02 slow3">
+									<span>연금닥터가<br>진단해줘요</span>
+								</div>
+								<div class="pop_bubble bubble03 slow4">
+									<span>고수들의<br>관리비법을<br>볼 수 있어요</span>
+								</div>
+								<div class="pop_bubble bubble04 slow5">
+									<span>깜빡하더라도<br>알림을<br>보내드려요</span>
+								</div>
+								<div class="pop_bubble bubble05 slow6">
+									<span>가족과<br>함께할 수<br>있어요</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sec15">
+						<div class="inner">
+							<h3 class="irp_tit" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="300"
+								data-aos-duration="1000">
+								퇴직연금 상품 가입 전<br>
+								이것만 알아두세요.</h3>
+							<ul class="irp_info_list" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="300"
+								data-aos-duration="1000">
+								<li><a href="#;">퇴직연금제도 일반</a></li>
+								<li><a href="#;">개인형 IRP로 이전 시 효과</a></li>
+								<li><a href="#;">노후 설계의 중요성</a></li>
+								<li><a href="#;">유의사항 (해지)</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //contents -->
+
+		<div class="bottom_btn_area trans">
+			<a href="개인형IRP가입하기-이용목적선택.html" class="btn btn_lg btn_primary">가입 시작하기</a>
+		</div>
+
+		<div class="layer_popup_box" data-popup="popup1" tabindex="0">
+			<div class="dim"></div>
+			<div class="popup" tabindex="0">
+				<div class="popup_head bg_default">
+					<h4 class="bg_popup_tit">
+						김하나님은 <em>연말정산</em>때 <em>세액공제</em>를<br>
+						얼마나 받을 수 있을까요?
+					</h4>
+				</div>
+				<div class="popup_content">
+					<div class="inner">
+						<div class="chk_wrap">
+							<span class="chk min chk_box">
+								<input type="radio" name="pop_chk1" id="pop_chk1_1">
+								<label for="pop_chk1_1" data-ani-trigger="cont1">근로소득</label>
+							</span>
+							<span class="chk min chk_box">
+								<input type="radio" name="pop_chk1" id="pop_chk1_2">
+								<label for="pop_chk1_2" data-ani-trigger="cont1">종합소득</label>
+							</span>
+						</div>
+						<div class="mt_4">
+							<div data-ani-target="cont1">
+								<div>
+									<span class="chk">
+										<input type="radio" name="pop_chk2" id="pop_chk2_1">
+										<label for="pop_chk2_1" data-ani-trigger="cont2">4,000 만원 이하</label>
+									</span>
+								</div>
+								<div class="mt_2">
+									<span class="chk">
+										<input type="radio" name="pop_chk2" id="pop_chk2_2">
+										<label for="pop_chk2_2" data-ani-trigger="cont2">4,000 만원 ~ 1억원 이하</label>
+									</span>
+								</div>
+								<div class="mt_2">
+									<span class="chk">
+										<input type="radio" name="pop_chk2" id="pop_chk2_3">
+										<label for="pop_chk2_3" data-ani-trigger="cont2">1억 초과</label>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="mt_8">
+							<div data-ani-target="cont2">
+								<div class="irp_pop_tit bg01">
+									<strong>
+										연금으로 <span class="fwb">700만원</span> 입금 할 경우<br>
+										세액공제 금액은 <span class="fwb">115만 5천원</span> 입니다.
+									</strong>
+								</div>
+							</div>
+						</div>
+						<script>
+							function preinp(e, t, multiple) {
+								e = $(e);
+								t = $(t)
+								a = t.text(e.val() * multiple)
+							}
+						</script>
+
+						<div class="mt_8 slow1">
+							<div data-ani-target="cont2">
+								<div class="irp_toggle_wrap">
+									<a href="#;" class="irp_toggle_tit">100만원을 입금했을 때도 궁금한가요?</a>
+									<div class="irp_toggle_con">
+										<div class="pre_field_txt fs-15">
+											<input type="text" name="" id="" class="pre_field txt_c" placeholder="금액입력" style="width: 110px;"
+												onkeypress="preinp(this, '#pre1', 0.165)">
+											원을
+											입금하면<br>
+											연말정상 때 세액공제 금액은 <span id="pre1">?</span> 입니다.
+										</div>
+									</div>
+								</div>
+							</div>
+							<div data-ani-target="cont2" class="slow4">
+								<div class="mt_6 txt_r">
+									<a href="#;" class="link line_none">자세히 보기</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="popup_btn_wrap">
+						<button type="button" class="btn btn_lg btn_primary" onclick="fn_hide_popup('popup1')">
+							확인 <span></span>
+						</button>
+					</div>
+				</div>
+				<button type="button" class="btn_popup_close" onclick="fn_hide_popup('popup1');"><span
+						class="blind">닫기</span></button>
+			</div>
+		</div>
+
+		<aside class="consulting">
+			<div class="consult_wrap">
+				<button type="button" class="btn_consult">
+					상담 진행하기
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</button>
+				<button type="button" class="btn_close">상담 버튼 닫기</button>
+			</div>
+		</aside>
+
+	</div>
+</body>
+
+</html>

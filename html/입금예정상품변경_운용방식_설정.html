@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
+	<script src="../resources/js/jquery-3.5.1.min.js"></script>
+	<script src="../resources/js/jquery-ui.js"></script>
+	<script src="../resources/js/jquery.aniview.js"></script>
+	<script src="../resources/js/swiper-bundle.js"></script>
+
+	<link rel="stylesheet" href="../resources/css/animate.min.css">
+	<link rel="stylesheet" href="../resources/css/common.css">
+	<link rel="stylesheet" href="../resources/css/style.css">
+	<link rel="stylesheet" href="../resources/css/swiper.min.css">
+
+
+	<!-- 퍼블용 include -->
+	<script src="../resources/js/include.js"></script>
+	<!-- //퍼블용 include -->
+
+	<script src="../resources/js/ui.js"></script>
+
+	<title>1depth | 2depth ...</title>
+</head>
+
+<body>
+	<div id="wrap" class="wrap">
+
+		<header id="header" class="header">
+			<div class="header_cont">
+				<div class="inner">
+					<a href="#;" class="btn_undo" onclick="window.history.go(-1)">이전화면으로 돌아가기</a>
+					<h2 class="header_tit">입금 예정상품 변경</h2>
+				</div>
+			</div>
+		</header>
+
+		<!-- contents -->
+		<div id="contents" class="contents">
+			<div class="inner">
+				<div class="cont_top">
+					<div class="ani-fadeinup" data-av-animation="animate__fadeInUp">
+						<div class="cont_step"><span class="blind">6단계 중1단계</span>
+							<span class="step" aria-hidden="true">
+								<em>1</em> / <span>5</span>
+							</span>
+						</div>
+						<h3 class="cont_tit">운용방식 설정하기</h3>
+					</div>
+				</div>
+				<div class="mt-30">
+					<div class="ani-fadeinup" data-av-animation="animate__fadeInUp">
+						<div><a href="#n" class="btn_dft">“입금예정상품변경” 가이드 보고 시작하기</a></div>
+					</div>
+				</div>
+				<div class="mt-50">
+					<div class="ani-fadeinup" data-av-animation="animate__fadeInUp">
+						<p class="fwm fs-20 color_black">고객님의 개인형 IRP 계좌로 퇴직금이 적립되고 있습니까?</p>
+						<div class="chk_btn_wrap mt-13">
+							<span class="chk_btn">
+								<input type="radio" name="chk2" id="chk2_1" data-ani-trigger="cont1">
+								<label for="chk2_1">네</label>
+							</span>
+							<span class="chk_btn">
+								<input type="radio" name="chk2" id="chk2_2" checked>
+								<label for="chk2_2">아니오</label>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="section mt-50">
+					<div data-ani-target="cont1">
+						<h4 class="tit">
+							입금 시 상품 매수 방식을 선택하세요.
+						</h4>
+						<ul class="item_list type_chk">
+							<li>
+								<span class="chk">
+									<input type="radio" name="chk1" id="chk1_1" checked>
+									<label for="chk1_1">선택</label>
+								</span>
+								<div class="chk_for" aria-labelledby="chk1_1">
+									<strong>개인적립금과 퇴직급여(퇴직금)가 입금되면 같은 상품으로 매수</strong>
+								</div>
+							</li>
+							<li>
+								<span class="chk">
+									<input type="radio" name="chk1" id="chk1_2">
+									<label for="chk1_2">선택</label>
+								</span>
+								<div class="chk_for" aria-labelledby="chk1_2">
+									<strong>개인적립금과 퇴직급여(퇴직금)가 입금되면 다른 상품으로 매수</strong>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="tooltip_box mt_4">
+					<div class="tooltip_area">
+						<button type="button" class="tooltip_btn">
+							<span>조금 더 자세한 내용을 알려드립니다.</span>
+							<i class="ico_toggle">상세보기</i>
+						</button>
+					</div>
+					<div class="tooltip_cont" aria-hidden="true" tabindex="0" style="display: none;">
+						<div>
+							<strong>정기예금 매도 시</strong>
+							<ul class="list list_type1">
+								<li>약정이율이 아닌 정기예금의 중도해지 이율이 적용되므로, 현재의 평가금액보다 적은 금액이 지급될 수 있습니다.</li>
+								<li>반드시 계좌별 만기일을 확인해주세요.</li>
+							</ul>
+							<div class="mt-15">
+								<strong>투자상품 매도 시 </strong>
+								<ul class="list list_type1">
+									<li>투자상품의 종류 및 거래시간에 따라 적용되는 기준가가 다릅니다. 해당 펀드의 매도일에 따라 매수하려는 상품의 기준가 적용일과도 상당한 차이가 있을 수 있습니다.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- //contents -->
+
+		<div class="bottom_btn_area">
+			<a href="입금예정상품변경_매수상품등록및운용비율설정.html" class="btn btn_lg btn_primary">다음</a>
+		</div>
+
+		<aside class="consulting">
+			<div class="consult_wrap">
+				<button type="button" class="btn_consult">
+					상담 진행하기
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</button>
+				<button type="button" class="btn_close">상담 버튼 닫기</button>
+			</div>
+		</aside>
+
+	</div>
+</body>
+
+</html>

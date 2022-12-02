@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
+	<script src="../resources/js/jquery-3.5.1.min.js"></script>
+	<script src="../resources/js/jquery-ui.js"></script>
+	<script src="../resources/js/jquery.aniview.js"></script>
+	<script src="../resources/js/swiper-bundle.js"></script>
+
+	<link rel="stylesheet" href="../resources/css/animate.min.css">
+	<link rel="stylesheet" href="../resources/css/common.css">
+	<link rel="stylesheet" href="../resources/css/style.css">
+	<link rel="stylesheet" href="../resources/css/swiper.min.css">
+
+
+	<!-- 퍼블용 include -->
+	<script src="../resources/js/include.js"></script>
+	<!-- //퍼블용 include -->
+
+	<script src="../resources/js/ui.js"></script>
+
+	<title>1depth | 2depth ...</title>
+</head>
+
+<body>
+	<div id="wrap" class="wrap">
+
+		<!-- include header -->
+		<header id="header" class="header">
+			<div class="header_cont">
+				<div class="inner">
+					<a href="#;" class="btn_undo" onclick="window.history.go(-1)">이전화면으로 돌아가기</a>
+					<h2 class="header_tit">개인형 IRP 가입하기</h2>
+				</div>
+			</div>
+		</header>
+		<!-- //include header -->
+
+		<!-- contents -->
+		<div id="contents" class="contents">
+			<div class="inner">
+				<div class="cont_top">
+					<div class="cont_step">
+						<span class="step">
+							<em>1</em> / <span>5</span>
+						</span>
+						<p class="ref">‘3분’이면 가입완료</p>
+					</div>
+					<h3 class="cont_tit">가입자격 확인하기</h3>
+					<p class="cont_desc">서류제출 없이 가입자격을 확인합니다.</p>
+					<div class="tooltip_box mt_4">
+						<div class="tooltip_area">
+							<button type="button" class="tooltip_btn">
+								<span>가입자격 확인용 서류제출 자동화 서비스 안내</span>
+								<i class="ico_toggle">상세보기</i>
+							</button>
+						</div>
+						<div class="tooltip_cont" aria-hidden="true" tabindex="0">
+							<div>
+								<strong>서류제출 자동화 서비스란?</strong>
+								<ul class="list list_type1">
+									<li><span class="color_black fwr">건강보험공단, 국세청과 연계</span>해 고객님의 공인(금융)인증서 및 공동인증서를 통해 확인하는 서비스를 말합니다.
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section">
+					<div class="sub_section">
+						<span class="chk">
+							<input type="checkbox" name="chk1" id="chk1_1" data-ani-trigger="cont1">
+							<label for="chk1_1">[필수]개인(신용)정보 수집·이용 동의서 (퇴직연금 개인형 IRP 가입용) <i class="ico_arr_right"></i></label>
+						</span>
+					</div>
+					<div class="sub_section">
+						<div data-ani-target="cont1">
+							<a href="#;" class="field_wrap type_select" onclick="fn_open_popup('popup1', this)">
+								<div class="field">
+									<span class="lab">가입자격 선택하기</span>
+									<div class="val" data-ani-trigger="cont2"></div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="sub_section">
+						<div data-ani-target="cont2">
+							<div class="field_wrap">
+								<div class="field">
+									<span class="lab">주민등록번호 입력하기</span>
+									<input type="text" name="" id="inp1_1" class="val">
+									<span class="dash">-</span>
+									<input type="password" name="" id="inp1_2" class="val">
+								</div>
+							</div>
+							<p class="guide_txt mt_8">
+								아래 [가입자격 확인] 버튼을 선택하신 후<br>
+								공인(금융)인증서 또는 공동인증서로 인증을 진행해주세요.
+							</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- //contents -->
+
+		<div class="bottom_btn_area">
+			<a href="개인형IRP가입하기-가입자격확인하기-인증서선택하기.html" class="btn btn_lg btn_primary">가입자격 확인</a>
+		</div>
+
+		<div class="layer_popup_box" data-popup="popup1" tabindex="0">
+			<div class="dim"></div>
+			<div class="popup bottom_sheet" tabindex="0">
+				<div class="popup_head">
+					<h4 class="popup_tit">선택</h4>
+				</div>
+				<div class="popup_content">
+
+					<div class="scroll_container">
+						<div class="scroll_track opt_wrap row3">
+							<ul class="scroll_content">
+								<li><button type="button">급여소득자</button></li>
+								<li><button type="button">자영업자</button></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+				<button type="button" class="btn_popup_close" onclick="fn_hide_popup('popup1');"><span
+						class="blind">닫기</span></button>
+			</div>
+		</div>
+
+		<aside class="consulting">
+			<div class="consult_wrap">
+				<button type="button" class="btn_consult">
+					상담 진행하기
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</button>
+				<button type="button" class="btn_close">상담 버튼 닫기</button>
+			</div>
+		</aside>
+
+	</div>
+</body>
+
+</html>

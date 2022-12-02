@@ -1,0 +1,107 @@
+@use '../var'as*;
+
+@include space-default($space-set, $syntax-set);
+
+.blind {
+	@include blind;
+}
+
+.d_i_b {
+	display: inline-block !important;
+}
+
+.d_b {
+	display: block !important;
+}
+
+.txt_l {
+	text-align: left !important;
+}
+
+.txt_c {
+	text-align: center !important;
+}
+
+.txt_r {
+	text-align: right !important;
+}
+
+.txt_primary {
+	color: $bc-1 !important;
+}
+
+.txt_white {
+	color: #fff !important;
+}
+
+.fwl {
+	font-weight: 300 !important;
+}
+
+.fwr {
+	font-weight: 400 !important;
+}
+
+.fwm {
+	font-weight: 500 !important;
+}
+
+.fwb {
+	font-weight: 600 !important;
+}
+
+.fz16 {
+	font-size: 16px !important;
+}
+
+.fz18 {
+	font-size: 18px !important;
+}
+
+.fz20 {
+	font-size: 20px !important;
+}
+
+.fz22 {
+	font-size: 22px !important;
+}
+
+.lh_sm {
+	line-height: 1.2 !important;
+}
+
+.color_black {
+	color: $black !important;
+}
+
+.color_gray {
+	color: #333 !important;
+}
+
+.color_red {
+	color: $red !important;
+}
+
+.color_blue {
+	color: #348dbf !important;
+}
+
+.bg_primary {
+	background-color: $bc-1 !important;
+}
+
+.bg_secondary {
+	background-color: $bc-2 !important;
+}
+
+.bg_blue {
+	background-color: $blue !important;
+}
+
+.bg_lightblue {
+	background-color: #e9f6f6 !important;
+}
+
+.bg_default {
+	background-color: #f9f9fb !important;
+}

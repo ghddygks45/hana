@@ -1,0 +1,105 @@
+$space-set : ( //
+	0,
+	1,
+	2,
+	3,
+	4,
+	5,
+	6,
+	7,
+	8,
+	9,
+	10,
+	11,
+	12,
+	13,
+	14,
+	15,
+	16,
+	17,
+	18,
+	19,
+	20 //
+);
+
+$syntax-set : ( //
+	mt : 'margin-top',
+	mb : 'margin-bottom',
+	mr : 'margin-right',
+	ml : 'margin-left',
+	pt : 'padding-top',
+	pb : 'padding-bottom',
+	pr : 'padding-right',
+	pl : 'padding-left'
+);
+
+
+@mixin space-default($space-map, $syntax-map) {
+	@each $space in $space-map {
+
+		@each $key,
+		$value in $syntax-map {
+			.#{$key}_#{$space} {
+				#{$value}: $space * 5px !important;
+			}
+		}
+	}
+}
+
+@mixin ir {
+	font-size: 1px;
+	text-indent: -9999rem;
+	overflow: hidden;
+	color: transparent;
+}
+
+@mixin ico_set($w, $h) {
+	display: inline-flex;
+	width: #{$w}px;
+	height: #{$h}px;
+
+	@include ir;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+}
+
+// blind
+@mixin blind {
+	position: absolute;
+	border: 0;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	clip: rect(0, 0, 0, 0);
+}
+
+// 말줄임표 : ellipsis($lines : n)
+@mixin ellipsis($lines: 1) {
+	@if ($lines==1) {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	@else {
+		display: -webkit-box;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		-webkit-line-clamp: $lines;
+		-webkit-box-orient: vertical;
+	}
+}
+
+// clearboth
+@mixin clearboth() {
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}

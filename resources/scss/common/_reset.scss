@@ -1,0 +1,260 @@
+/* Reset */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+a,
+address,
+area,
+article,
+aside,
+audio,
+b,
+body,
+br,
+button,
+canvas,
+caption,
+cite,
+code,
+col,
+colgroup,
+dd,
+del,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+frame,
+frameset,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+head,
+header,
+hr,
+html,
+i,
+iframe,
+img,
+ins,
+input,
+label,
+legend,
+li,
+link,
+map,
+meta,
+nav,
+object,
+ol,
+p,
+pre,
+q,
+rp,
+rt,
+ruby,
+s,
+script,
+section,
+select,
+source,
+span,
+strong,
+style,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+textarea,
+tfoot,
+th,
+thead,
+time,
+title,
+tr,
+u,
+ul,
+video {
+	margin: 0;
+	padding: 0;
+	font-family: inherit;
+	font-size: inherit;
+	font-style: normal;
+	font-weight: inherit;
+	color: inherit;
+	box-sizing: border-box;
+	-webkit-overflow-scrolling: touch
+}
+
+html {
+	-webkit-text-size-adjust: none;
+}
+
+body {
+	-webkit-overflow-scrolling: touch;
+	padding: 0;
+	padding-right: constant(safe-area-inset-right);
+	padding-left: constant(safe-area-inset-left);
+	padding-right: env(safe-area-inset-right);
+	padding-left: env(safe-area-inset-left);
+	background-color: #f9f9fb;
+	color: #666;
+	font-size: 14px;
+	font-weight: 300;
+	font-family: "Roboto", "Noto Sans KR", "malgun gothic", Arial, sans-serif;
+	letter-spacing: -0.25px;
+	line-height: 1.5714286;
+	word-wrap: break-word;
+	word-break: keep-all;
+	overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: normal;
+	font-weight: normal;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #666;
+}
+
+a:hover,
+a:active,
+a:visited {
+	text-decoration: none;
+}
+
+img {
+	border: 0;
+	vertical-align: top;
+}
+
+button {
+	border: 0;
+	background-color: transparent;
+	vertical-align: middle;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: 300;
+}
+
+textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #d7d7d7;
+	font-family: inherit;
+	font-weight: 300;
+	resize: none;
+}
+
+em,
+address {
+	font-style: normal;
+}
+
+table {
+	width: 100%;
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+
+caption {
+	width: 0;
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+	color: transparent;
+}
+
+label {
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+input[type=text],
+input[type=password],
+input[type=date],
+input[type=tel] {
+	-webkit-appearance: none;
+	box-sizing: border-box;
+	border-radius: 0;
+}
+
+select,
+textarea {
+	appearance: none;
+	-webkit-appearance: none;
+	box-sizing: border-box;
+}
+
+input[type=checkbox],
+input[type=radio] {
+	vertical-align: middle;
+}
+
+main {
+	display: block;
+}
+
+strong {
+	font-weight: 500;
+	color: #000;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+// ::selection {
+// 	background: #0aa759;
+// }
+
+::placeholder {
+	font-family: 'Noto Sans KR';
+	font-weight: 300;
+	color: #666 !important
+}
+
+:-ms-input-placeholder {
+	font-family: 'Noto Sans KR';
+	font-weight: 300;
+	color: #666 !important;
+}
+
+::-ms-input-placeholder {
+	font-family: 'Noto Sans KR';
+	font-weight: 300;
+	color: #666 !important;
+}
+
+.ie9 select {
+	padding: 0 0 0 5px;
+	background-image: none !important;
+}

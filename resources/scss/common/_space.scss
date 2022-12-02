@@ -1,0 +1,164 @@
+// marign, padding 값
+$space-values : (0,
+	2,
+	3,
+	5,
+	6,
+	7,
+	8,
+	9,
+	10,
+	11,
+	12,
+	13,
+	14,
+	15,
+	17,
+	18,
+	19,
+	20,
+	25,
+	30,
+	35,
+	40,
+	50,
+	60) !default;
+
+// font-size 값
+$font-values : (12,
+	13,
+	14,
+	15,
+	16,
+	17,
+	18,
+	19,
+	20,
+	21,
+	22,
+	23,
+	24,
+	25,
+	26,
+	27,
+	28,
+	29,
+	30,
+	36) !default;
+
+// margin, padding 약칭
+$space-prefixes : (p : padding,
+	pt : padding-top,
+	pr : padding-right,
+	pb : padding-bottom,
+	pl : padding-left,
+	m : margin,
+	mt : margin-top,
+	mr : margin-right,
+	mb : margin-bottom,
+	ml : margin-left,
+) !default;
+
+
+$grid-breakpoints-custom: ( // media query breakpoints
+	adap: adaptive,
+	sm: 1136px, // Mobile
+	lg: 1137px, // PC
+) !default;
+
+$breakpoints : $grid-breakpoints-custom;
+
+
+// margin, padding class 정의
+@mixin make-space($values, $prefixes, $breakpoints) {
+
+	@each $breakpoint-name,
+	$breakpoint-value in $breakpoints {
+
+		@if($breakpoint-value=='adaptive') {
+
+			@each $attr-short,
+			$attr-long in $prefixes {
+				@each $value in $values {
+					.#{$attr-short}-#{$value} {
+						#{$attr-long}: #{$value}#{'px !important'};
+					}
+				}
+			}
+		}
+
+		@else if($breakpoint-name=='sm') {
+			@media screen and (max-width: $breakpoint-value) {
+
+				@each $attr-short,
+				$attr-long in $prefixes {
+					@each $value in $values {
+						.#{$breakpoint-name}-#{$attr-short}-#{$value} {
+							#{$attr-long}: #{$value}#{'px !important'};
+						}
+					}
+				}
+			}
+		}
+
+		@else {
+
+			@media screen and (min-width: $breakpoint-value),
+			print {
+
+				@each $attr-short,
+				$attr-long in $prefixes {
+					@each $value in $values {
+						.#{$breakpoint-name}-#{$attr-short}-#{$value} {
+							#{$attr-long}: #{$value}#{'px !important'};
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// font-size class 정의
+@mixin make-font-space($values, $breakpoints) {
+
+	@each $breakpoint-name,
+	$breakpoint-value in $breakpoints {
+
+		@if($breakpoint-value=='adaptive') {
+
+			@each $value in $values {
+				.fs-#{$value} {
+					#{'font-size'}: #{$value}#{'px !important'};
+				}
+			}
+		}
+
+		@else if($breakpoint-name=='sm') {
+			@media screen and (max-width: $breakpoint-value) {
+				@each $value in $values {
+					.#{$breakpoint-name}-fs-#{$value} {
+						#{'font-size'}: #{$value}#{'px !important'};
+					}
+				}
+			}
+		}
+
+
+
+		@else {
+
+			@media screen and (min-width: $breakpoint-value),
+			print {
+				@each $value in $values {
+					.#{$breakpoint-name}-fs-#{$value} {
+						#{'font-size'}: #{$value}#{'px !important'};
+					}
+				}
+			}
+		}
+	}
+}
+
+@include make-space($space-values, $space-prefixes, $breakpoints);
+@include make-font-space($font-values, $breakpoints);
